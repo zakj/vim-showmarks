@@ -1,4 +1,4 @@
-*showmarks.txt* Plugin for visually showing the location of marks
+*showmarks.txt* Visually show the location of marks
 
                By Anthony Kruize <trandor@labyrinth.net.au>
                   Michael Geddes <michaelrgeddes@optushome.com.au>
@@ -121,6 +121,21 @@ behaves:
    This option defines how all other marks will be displayed. It behaves the
    same as the |'showmarks_textlower'| option.
 
+'showmarks_hlline_lower' boolean (default: 0)        *'showmarks_hlline_lower'*
+                        global
+   This option defines whether the entire line a lowercase mark is on will
+   be highlighted.
+
+'showmarks_hlline_upper' boolean (default: 0)        *'showmarks_hlline_upper'*
+                        global
+   This option defines whether the entire line an uppercase mark is on will
+   be highlighted.
+
+'showmarks_hlline_other' boolean (default: 0)        *'showmarks_hlline_other'*
+                        global
+   This option defines whether the entire line other marks are on will be
+   highlighted.
+
 ===============================================================================
 3. Highlighting                                        *showmarks-highlighting*
 
@@ -186,6 +201,13 @@ The following mappings are setup by default:
 ===============================================================================
 6. ChangeLog                                              *showmarks-changelog*
 
+2.2 - 2004-08-17
+   Fixed highlighting of the A-Z marks when ignorecase is on. (Mike Kelly)
+   Fixed the delay with ShowMarks triggering when entering a buffer for the
+     first time. (Mikolaj Machowski)
+   Added support for highlighting the entire line where a mark is placed.
+   Now uses HelpExtractor by Charles E. Campbell to install the help file.
+
 2.1 - 2004-03-04
    Added ShowMarksOn. It forces ShowMarks to be enabled whether it's on or not.
      (Gary Holloway)
@@ -200,7 +222,7 @@ The following mappings are setup by default:
 
 2.0 - 2003-08-11
    Added ability to ignore buffers by type.
-   Toggling ShowMarks off now works correctly when switching buffers.
+   Fixed toggling ShowMarks off when switching buffers.
    ShowMarksHideMark and ShowMarksHideAll have been renamed to
      ShowMarksClearMark and ShowMarksClearAll.
    Marks a-z, A-Z and others now have different highlighting from each other.
@@ -229,7 +251,7 @@ The following mappings are setup by default:
 1.2 - 2002-03-06
    Added a check that Vim was compiled with +signs support.
    Added the ability to define which marks are shown.
-   Removed debugging code I accidently left in.
+   Removed debugging code that was accidently left in.
 
 1.1 - 2002-02-05
    Added support for the A-Z marks.
@@ -239,4 +261,4 @@ The following mappings are setup by default:
 1.0 - 2001-11-20
    First release.
 
-vim:tw=78:ts=4:ft=help
+vim:tw=78:ts=8:ft=help
