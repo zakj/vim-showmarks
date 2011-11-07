@@ -69,7 +69,7 @@ behaves:
 <
    To override this for a particular buffer with 'ABCDhj.'^':
 >
-     let b:showmarks_include="abcdefzxABJio"
+     let b:showmarks_include="ABCDhj.'^"
 <
                                                       *'showmarks_ignore_type'*
 'showmarks_ignore_type' string  (default: "hq")
